@@ -35,17 +35,17 @@ html{scroll-behavior:smooth}
   --surface:#0c0c1a;
   --card:#101020;
   --card2:#131328;
-  --v1:#5a2dff;
-  --v2:#7b52ff;
-  --v3:#9d7bff;
-  --c1:#4da6ff;
-  --c2:#80c2ff;
+  --v1:#6f3bff;
+  --v2:#8a5fff;
+  --v3:#a87aff;
+  --c1:#8ab4ff;
+  --c2:#b8d0ff;
   --text:#eceeff;
   --muted:#6a6d8a;
   --faint:#3a3d52;
-  --glow:rgba(90,45,255,0.4);
-  --glow2:rgba(77,166,255,0.2);
-  --border:rgba(90,45,255,0.15);
+  --glow:rgba(111,59,255,0.4);
+  --glow2:rgba(138,180,255,0.2);
+  --border:rgba(111,59,255,0.18);
   --border2:rgba(255,255,255,0.06);
 }
 
@@ -245,7 +245,7 @@ nav{
 }
 
 /* SECTION */
-.sec{padding:100px 24px;position:relative;z-index:1;}
+.sec{padding:60px 24px;position:relative;z-index:1;}
 .wrap{max-width:1040px;margin:0 auto;}
 .wrap-sm{max-width:760px;margin:0 auto;}
 
@@ -391,7 +391,7 @@ nav{
 .dcontent p{font-size:0.82rem;color:var(--muted);line-height:1.6;}
 
 /* OFFER */
-.offer-grid{display:grid;grid-template-columns:1fr 480px;gap:64px;align-items:start;}
+.offer-grid{display:grid;grid-template-columns:1fr 480px;gap:64px;align-items:center;}
 .feat-list{display:flex;flex-direction:column;gap:18px;margin-top:32px;}
 .feat{display:flex;gap:14px;align-items:flex-start;}
 .feat-icon{
@@ -462,20 +462,21 @@ nav{
 .seal svg{color:var(--v3);flex-shrink:0;}
 
 /* RESULTS GRID */
-.results{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px;}
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:32px;}
 .rcard{
   background:var(--card);border:1px solid var(--border2);
-  padding:28px 24px;
+  padding:16px 18px;
   transition:border-color 0.3s,background 0.3s;
+  display:flex;align-items:flex-start;gap:12px;
 }
 .rcard:hover{border-color:rgba(90,45,255,0.3);background:var(--card2);}
-.ricon{font-size:1.8rem;margin-bottom:14px;display:block;}
+.ricon{font-size:1.2rem;margin-bottom:0;display:block;flex-shrink:0;margin-top:2px;}
 .rcard h3{
   font-family:'Barlow Condensed',sans-serif;
-  font-weight:700;font-size:1rem;letter-spacing:0.06em;
-  text-transform:uppercase;color:var(--text);margin-bottom:8px;
+  font-weight:700;font-size:0.88rem;letter-spacing:0.04em;
+  text-transform:uppercase;color:var(--text);margin-bottom:4px;
 }
-.rcard p{font-size:0.83rem;color:var(--muted);line-height:1.65;}
+.rcard p{font-size:0.78rem;color:var(--muted);line-height:1.55;}
 
 /* TESTIMONIALS */
 .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;}
@@ -533,18 +534,18 @@ nav{
 
 /* GUARANTEE SECTION */
 .guar-layout{
-  display:grid;grid-template-columns:160px 1fr;gap:56px;align-items:center;
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:32px;
 }
 .guar-badge{
-  width:160px;height:160px;border-radius:50%;flex-shrink:0;
-  background:conic-gradient(from 0deg,var(--v1) 0%,var(--c1) 50%,var(--v1) 100%);
+  width:180px;height:180px;border-radius:50%;flex-shrink:0;
+  background:radial-gradient(circle at 40% 35%, #9d7bff 0%, #5a2dff 60%, #3a1acc 100%);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   color:#fff;text-align:center;
-  box-shadow:0 0 80px var(--glow),0 0 40px var(--glow2);
+  box-shadow:0 0 80px var(--glow),0 0 120px rgba(90,45,255,0.3);
 }
-.gn{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:4.5rem;line-height:1;}
-.gl{font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;opacity:0.8;}
-.guar-text p{color:var(--muted);font-size:0.92rem;line-height:1.85;margin-bottom:16px;}
+.gn{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:5rem;line-height:1;}
+.gl{font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;opacity:0.85;}
+.guar-text p{color:var(--muted);font-size:0.92rem;line-height:1.85;margin-bottom:16px;max-width:480px;text-align:center;}
 
 /* FAQ */
 .faq-list{display:flex;flex-direction:column;gap:2px;max-width:760px;margin:48px auto 0;}
@@ -696,13 +697,15 @@ footer{
     Vagas limitadas · Começa segunda-feira
   </div>
   <p class="hero-pre">Método Hábito Angular</p>
-  <h1 class="hero-title" style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.6rem,3.5vw,2.8rem);line-height:1.15;letter-spacing:-0.01em;max-width:760px;margin:0 auto 40px;text-transform:none;">
-    Como pessoas comuns estão conseguindo manter um hábito por mais de <em style="font-style:normal;background:linear-gradient(135deg,var(--v3),var(--c1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">30 dias seguidos</em> pela primeira vez na vida<br><span style="color:var(--muted);font-size:0.85em;">(sem depender de motivação)</span>
-  </h1>
-
-  <div class="vsl-outer">
-    <div class="vsl-frame">
-      <iframe src="https://www.youtube.com/embed/haHNWBGqcIA?rel=0&modestbranding=1" allowfullscreen title="VSL Desafio 7 Dias"></iframe>
+  <div style="width:100%;max-width:760px;margin:0 auto;">
+    <h1 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2rem,4.5vw,3.8rem);line-height:1.1;letter-spacing:-0.01em;margin:0 0 12px;text-transform:none;color:var(--text);text-align:center;">
+      Como pessoas comuns estão conseguindo manter um hábito por mais de <em style="font-style:normal;background:linear-gradient(135deg,var(--v3),var(--c1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">30 dias seguidos</em> pela primeira vez na vida
+    </h1>
+    <p style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:clamp(1.1rem,2.5vw,1.8rem);color:var(--muted);text-align:center;margin:0 0 28px;letter-spacing:0.02em;">(sem depender de motivação)</p>
+    <div class="vsl-outer" style="max-width:100%;margin:0;">
+      <div class="vsl-frame">
+        <iframe src="https://www.youtube.com/embed/haHNWBGqcIA?rel=0&modestbranding=1" allowfullscreen title="VSL Desafio 7 Dias"></iframe>
+      </div>
     </div>
   </div>
 
@@ -883,20 +886,19 @@ footer{
 <section class="sec">
   <div class="wrap-sm">
     <div class="guar-layout fu">
+      <div class="sec-tag" style="justify-content:center;">Risco zero para você</div>
+      <h2 class="sec-title" style="text-align:center;">Garantia<br><span class="g">Total.</span></h2>
       <div class="guar-badge">
         <span class="gn">7</span>
         <span class="gl">dias de<br>garantia</span>
       </div>
-      <div>
-        <div class="sec-tag">Risco zero para você</div>
-        <h2 class="sec-title">Garantia<br><span class="g">Total.</span></h2>
-        <div class="guar-text">
-          <p>Se ao final do desafio você achar que o método não faz sentido, é só pedir reembolso. Sem perguntas, sem burocracia. O risco é todo meu — porque sei que funciona.</p>
-        </div>
-        <div class="seals" style="justify-content:flex-start;">
-          <div class="seal"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Compra Segura</div>
-          <div class="seal"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Dados Protegidos</div>
-        </div>
+      <div class="guar-text">
+        <p>Se ao final do desafio você achar que o método não faz sentido, é só pedir reembolso. Sem perguntas, sem burocracia. O risco é todo meu — porque sei que funciona.</p>
+      </div>
+      <div class="seals" style="justify-content:center;">
+        <div class="seal"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Compra Segura</div>
+        <div class="seal"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Dados Protegidos</div>
+        <div class="seal"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Suporte 24/7</div>
       </div>
     </div>
   </div>
