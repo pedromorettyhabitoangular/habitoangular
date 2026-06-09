@@ -21,9 +21,15 @@ src="https://www.facebook.com/tr?id=1691843358724038&ev=PageView&noscript=1"
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Desafio dos 7 Dias — Hábito Angular</title>
+<style>
+body{background:#05050d;color:#eceeff;}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:64px;background:rgba(5,5,13,0.88);border-bottom:1px solid rgba(111,59,255,0.15);}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 24px 80px;}
+</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=DM+Sans:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
 
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -677,7 +683,7 @@ footer{
 <!-- NAV -->
 <nav>
   <a href="#inicio" class="nav-brand">
-    <img src="images/logo.svg" alt="Hábito Angular" style="height:56px;width:auto;display:block;">
+    <img src="images/logo.png" alt="Hábito Angular" style="height:56px;width:auto;display:block;">
   </a>
   <div class="nav-right">
     <ul class="nav-links">
@@ -735,7 +741,7 @@ footer{
 
         <div style="padding:16px;background:var(--card);">
           <div style="background:#111;border-radius:8px;overflow:hidden;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:12px;">
-            <img src="images/nicolas.jpg" alt="Nicolas - 186/200 dias" style="width:100%;height:100%;object-fit:cover;">
+            <img src="images/nicolas.jpg" loading="lazy" alt="Nicolas - 186/200 dias" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0;">Jogo é jogo, treino é treino 😏<br><strong style="color:var(--v3);">186/200 dias</strong> · Academia</p>
         </div>
@@ -745,7 +751,7 @@ footer{
 
         <div style="padding:16px;background:var(--card);">
           <div style="background:#111;border-radius:8px;overflow:hidden;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:12px;">
-            <img src="images/kellim.jpg" alt="Kellim - 181/200 dias" style="width:100%;height:100%;object-fit:cover;">
+            <img src="images/kellim.jpg" loading="lazy" alt="Kellim - 181/200 dias" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0;">Bom Dia 🙏<br><strong style="color:var(--v3);">181/200 dias</strong> · Devocional</p>
         </div>
@@ -755,7 +761,7 @@ footer{
 
         <div style="padding:16px;background:var(--card);">
           <div style="background:#111;border-radius:8px;overflow:hidden;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:12px;">
-            <img src="images/emerson.jpg" alt="Emerson - 120/150 dias" style="width:100%;height:100%;object-fit:cover;">
+            <img src="images/emerson.jpg" loading="lazy" alt="Emerson - 120/150 dias" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0;"><strong style="color:var(--v3);">120/150 dias</strong> · Academia</p>
         </div>
@@ -765,7 +771,7 @@ footer{
 
         <div style="padding:16px;background:var(--card);">
           <div style="background:#111;border-radius:8px;overflow:hidden;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:12px;">
-            <img src="images/manu.jpg" alt="Manu - 145/150 dias" style="width:100%;height:100%;object-fit:cover;">
+            <img src="images/manu.jpg" loading="lazy" alt="Manu - 145/150 dias" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0;"><strong style="color:var(--v3);">145/150 dias</strong> · Leitura</p>
         </div>
@@ -819,7 +825,7 @@ footer{
     <div class="story-layout fu">
       <div class="story-photo">
         <div class="story-img-wrap">
-          <img src="images/pedro.jpg" alt="Pedro Moretti" loading="lazy">
+          <img src="images/pedro.jpg" alt="Pedro Moretti" loading="lazy" width="360" height="480">
         </div>
         <div class="story-chip">
           <span class="chip-num">515+</span>
