@@ -1,15 +1,3 @@
-Na versão anterior, utilizei uma variação com tons de creme que acabou diluindo
-a proposta de alto valor. Analisando a sua paleta, ela é muito mais adequada
-para construir a percepção de um produto premium, pois o contraste do fundo
-escuro com os detalhes em dourado e verde gera um impacto visual bem mais forte.
-
-Fiz a transição completa da página para a sua paleta de cores exata. Agora, toda
-a estrutura do site reflete a identidade Preto Premium, com os destaques em
-Dourado Óleo para as oportunidades de ganho e o Verde Crescimento para os
-elementos de sustentabilidade e credibilidade.
-
-Aqui está o código atualizado com a aplicação rigorosa dessas cores:
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -307,7 +295,7 @@ Aqui está o código atualizado com a aplicação rigorosa dessas cores:
     color: var(--cinza-claro);
   }
 
-  /* MODALIDADES (O "Pulo do Gato" - Sem entregar o segredo) */
+  /* MODALIDADES */
   .modalidades {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -354,7 +342,7 @@ Aqui está o código atualizado com a aplicação rigorosa dessas cores:
     color: var(--cinza-medio);
   }
 
-  /* DEPOIMENTOS */
+  /* DEPOIMENTOS EM VÍDEO */
   .testimonials {
     background: var(--fundo-secundario);
     padding: 64px 0;
@@ -376,49 +364,26 @@ Aqui está o código atualizado com a aplicação rigorosa dessas cores:
   .testimonial-card {
     background: var(--card-escuro);
     border-radius: 8px;
-    padding: 24px;
+    padding: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     border: 1px solid var(--borda-suave);
   }
 
-  .testimonial-card p {
-    font-size: 14px;
-    font-style: italic;
-    color: var(--cinza-claro);
-    margin-bottom: 16px;
+  .video-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 177.77%; /* 9:16 - ajuste para 56.25% se os vídeos forem horizontais */
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
   }
 
-  .testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .testimonial-avatar {
-    width: 44px;
-    height: 44px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: var(--dourado-premium);
-    font-size: 14px;
-    border: 1px solid rgba(244, 180, 0, 0.2);
-  }
-
-  .testimonial-info h5 {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--branco);
-  }
-
-  .testimonial-info span {
-    font-size: 12px;
-    color: var(--cinza-medio);
-    display: block;
+  .video-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
 
   /* SEÇÃO DE CONTATO / SUPORTE */
@@ -642,7 +607,6 @@ Aqui está o código atualizado com a aplicação rigorosa dessas cores:
       </div>
     </div>
 
-    <!-- Link do Checkout de Referência -->
     <a href="https://pay.kiwify.com.br/Pff56Ks" class="cta-btn">Quero Começar Agora</a>
     <p class="cta-sub">Acesso imediato · Garantia incondicional de 7 dias</p>
   </div>
@@ -682,12 +646,12 @@ Aqui está o código atualizado com a aplicação rigorosa dessas cores:
   </div>
 </section>
 
-<!-- OS SEGREDOS / CURIOSIDADE (Ajustado com base no áudio) -->
+<!-- OS SEGREDOS -->
 <section>
   <div class="container">
     <h2 class="title">Os segredos que você irá desbloquear para iniciar suas coletas da melhor forma</h2>
     <p class="center" style="margin-bottom: 32px;">Revelamos no material os canais fundamentais que trazem resultados rápidos para os coletores:</p>
-    
+
     <div class="modalidades">
       <div class="modalidade">
         <span class="num">01</span>
@@ -734,42 +698,45 @@ Aqui está o código atualizado com a aplicação rigorosa dessas cores:
   </div>
 </section>
 
-<!-- DEPOIMENTOS (Nova adição conforme o áudio) -->
+<!-- DEPOIMENTOS EM VÍDEO -->
 <section class="testimonials">
   <div class="container">
     <h2 class="title">O que dizem as pessoas que começaram a aplicar o guia</h2>
-    
+
     <div class="testimonials-grid">
       <div class="testimonial-card">
-        <p>"Eu estava procurando uma forma de fazer uma renda extra no final de semana. Com a estratégia de condomínios que o guia ensina, hoje recolho mais de 150 litros sem complicações."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">MS</div>
-          <div class="testimonial-info">
-            <h5>Marcos Silva</h5>
-            <span>Coletor nas horas vagas</span>
-          </div>
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/cvErP7mLQNI"
+            title="Depoimento"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
-      
+
       <div class="testimonial-card">
-        <p>"A abordagem para restaurantes sempre me deu receio, mas os scripts prontos facilitaram demais. Fechei duas parcerias logo na primeira semana de aplicação."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">CR</div>
-          <div class="testimonial-info">
-            <h5>Camila Ramos</h5>
-            <span>Empreendedora Local</span>
-          </div>
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/42Lz55x4yOs"
+            title="Depoimento"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
-      
+
       <div class="testimonial-card">
-        <p>"Mesmo aposentado, consegui organizar minha rotina. Faço a coleta em residências próximas duas vezes por semana e garanto um ótimo dinheiro extra todo mês."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">JC</div>
-          <div class="testimonial-info">
-            <h5>José Carlos</h5>
-            <span>Aposentado</span>
-          </div>
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/S1Nh3KGCuqA"
+            title="Depoimento"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
     </div>
@@ -785,7 +752,7 @@ Aqui está o código atualizado com a aplicação rigorosa dessas cores:
   </div>
 </section>
 
-<!-- OFERTA (Checkout de Referência) -->
+<!-- OFERTA -->
 <section id="oferta" class="section-alt">
   <div class="container">
     <h2 class="title">Viver de Óleo — Guia Completo da Coleta de Óleo de Cozinha Usado</h2>
@@ -802,8 +769,7 @@ Aqui está o código atualizado com a aplicação rigorosa dessas cores:
       <div class="price-old">De R$ 197,00</div>
       <div class="price-new"><sup>R$</sup>57</div>
       <p class="price-note">Apenas pagamento único. Receba em formato digital para leitura imediata.</p>
-      
-      <!-- Link do Checkout de Referência -->
+
       <a href="https://pay.kiwify.com.br/Pff56Ks" class="cta-btn">Quero o Guia por R$ 57</a>
     </div>
 
@@ -814,14 +780,13 @@ Aqui está o código atualizado com a aplicação rigorosa dessas cores:
   </div>
 </section>
 
-<!-- SEÇÃO DE SUPORTE / BOTÕES (Nova adição conforme o áudio) -->
+<!-- SEÇÃO DE SUPORTE -->
 <section class="suporte-section">
   <div class="container">
     <h3>Ainda tem alguma dúvida sobre o material?</h3>
     <p>Se você quer saber mais detalhes ou possui alguma pergunta sobre o guia, entre em contato direto conosco através das redes abaixo:</p>
-    
+
     <div class="suporte-buttons">
-      <!-- Links de contato configurados para suporte -->
       <a href="https://wa.me/5500999999999?text=Quero%20saber%20mais%20sobre%20o%20guia%20Viver%20de%20Óleo" class="suporte-btn whatsapp" target="_blank">
         Fale Conosco no WhatsApp
       </a>
@@ -832,13 +797,12 @@ Aqui está o código atualizado com a aplicação rigorosa dessas cores:
   </div>
 </section>
 
-<!-- CTA FINAL (Checkout de Referência) -->
+<!-- CTA FINAL -->
 <section class="section-alt center">
   <div class="container">
     <h2 class="title">Comece a aproveitar as oportunidades de coleta disponíveis hoje na sua região</h2>
     <p class="lead" style="max-width:560px; margin:0 auto 28px;">Aprenda a mapear e executar as rotas de coleta na sua cidade. Obtenha o seu material de apoio e dê início às atividades esta semana.</p>
-    
-    <!-- Link do Checkout de Referência -->
+
     <a href="https://pay.kiwify.com.br/Pff56Ks" class="cta-btn" style="margin:0 auto;">Sim, Quero Começar Agora</a>
     <p class="cta-sub" style="margin-top:12px; color: var(--cinza-medio);">Receba o acesso imediato ao guia após a aprovação do seu pagamento</p>
   </div>
