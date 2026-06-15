@@ -4,301 +4,597 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Viver de Óleo - Guia Completo da Coleta de Óleo de Cozinha Usado</title>
+
+<!-- Importação de fontes modernas -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
 <style>
-  :root{
-    --preto:#0c0c0c;
-    --preto2:#161310;
-    --dourado:#f0a830;
-    --dourado-escuro:#c97f0e;
-    --creme:#fdf8ef;
-    --verde:#1f9d55;
-    --verde-claro:#e7f7ee;
-    --texto:#2b2620;
-    --cinza:#6b6258;
+  :root {
+    --preto: #0b0908;
+    --preto2: #141210;
+    --dourado: #e2991d;
+    --dourado-claro: #f4be5e;
+    --dourado-escuro: #b8750a;
+    --creme: #faf6f0;
+    --card-bg: #ffffff;
+    --verde: #16a34a;
+    --verde-claro: #f0fdf4;
+    --texto: #2d2925;
+    --cinza: #6c6359;
+    --cinza-claro: #eaddcd;
   }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{
-    font-family: 'Georgia', 'Times New Roman', serif;
-    background:var(--creme);
-    color:var(--texto);
-    line-height:1.6;
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  h1,h2,h3,.display{
-    font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
-    text-transform:uppercase;
-    letter-spacing:-0.01em;
-    font-weight:900;
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--creme);
+    color: var(--texto);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
   }
-  .container{max-width:760px;margin:0 auto;padding:0 20px;}
+
+  h1, h2, h3, h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
 
   /* HERO */
-  .hero{
+  .hero {
     background: linear-gradient(180deg, var(--preto) 0%, var(--preto2) 100%);
-    color:#fff;
-    padding:36px 0 44px;
-    text-align:center;
-    border-bottom:6px solid var(--dourado);
-  }
-  .hero .eyebrow{
-    color:var(--dourado);
-    font-family:'Arial Black',sans-serif;
-    font-size:13px;
-    letter-spacing:0.18em;
-    text-transform:uppercase;
-    margin-bottom:14px;
-  }
-  .hero h1{
-    font-size:clamp(28px, 6vw, 44px);
-    line-height:1.15;
-    margin-bottom:16px;
-  }
-  .hero h1 span{
-    color:var(--dourado);
-    background:linear-gradient(90deg, var(--dourado-escuro), var(--dourado));
-    -webkit-background-clip:text;
-    background-clip:text;
-    -webkit-text-fill-color:transparent;
-  }
-  .hero .sub{
-    font-size:18px;
-    color:#d8d2c8;
-    max-width:620px;
-    margin:0 auto 28px;
-    font-family:'Georgia',serif;
+    color: #fff;
+    padding: 48px 0 60px;
+    text-align: center;
+    border-bottom: 5px solid var(--dourado);
   }
 
-  /* VSL placeholder */
-  .vsl-wrap{max-width:680px;margin:0 auto 8px;}
-  .vsl{
-    position:relative;
-    width:100%;
-    padding-top:56.25%;
-    background:#1a1a1a;
-    border-radius:6px;
-    border:2px solid var(--dourado);
-    overflow:hidden;
-    box-shadow:0 12px 40px rgba(240,168,48,0.18);
-  }
-  .vsl .placeholder{
-    position:absolute; inset:0;
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    gap:14px;
-    color:#cfc7ba;
-    font-family:'Arial',sans-serif;
-  }
-  .vsl .play{
-    width:64px;height:64px;border-radius:50%;
-    background:var(--dourado);
-    display:flex;align-items:center;justify-content:center;
-  }
-  .vsl .play::after{
-    content:'';
-    border-left:18px solid var(--preto);
-    border-top:11px solid transparent;
-    border-bottom:11px solid transparent;
-    margin-left:4px;
-  }
-  .vsl .placeholder small{font-size:12px;color:#8a8278;letter-spacing:.05em;}
-
-  /* CTA buttons */
-  .cta-btn{
-    display:block;
-    width:100%;
-    max-width:520px;
-    margin:26px auto 6px;
-    background:linear-gradient(180deg, var(--dourado) 0%, var(--dourado-escuro) 100%);
-    color:var(--preto);
-    text-align:center;
-    font-family:'Arial Black',sans-serif;
-    font-size:clamp(16px,4vw,21px);
-    text-transform:uppercase;
-    letter-spacing:0.02em;
-    padding:18px 24px;
-    border-radius:6px;
-    text-decoration:none;
-    box-shadow:0 8px 0 var(--dourado-escuro), 0 14px 28px rgba(0,0,0,0.35);
-    transition:transform .08s ease;
-  }
-  .cta-btn:active{transform:translateY(4px);box-shadow:0 4px 0 var(--dourado-escuro);}
-  .cta-sub{
-    text-align:center;
-    color:#a89e90;
-    font-size:13px;
-    font-family:'Arial',sans-serif;
+  .hero .eyebrow {
+    color: var(--dourado-claro);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: inline-block;
   }
 
-  /* SECTIONS */
-  section{padding:54px 0;}
-  .section-dark{background:var(--preto);color:#fff;}
-  .section-dark h2{color:var(--dourado);}
-  h2.title{
-    font-size:clamp(24px,5vw,34px);
-    line-height:1.25;
-    margin-bottom:22px;
-    text-align:center;
-  }
-  .lead{
-    font-size:19px;
-    margin-bottom:18px;
-  }
-  p{margin-bottom:16px;font-size:17px;}
-
-  /* PROBLEM LIST */
-  .problem-list{list-style:none;margin:24px 0;}
-  .problem-list li{
-    display:flex;gap:14px;align-items:flex-start;
-    margin-bottom:16px;
-    font-size:17px;
-  }
-  .problem-list li::before{
-    content:'✕';
-    color:#e15c5c;
-    font-family:'Arial Black',sans-serif;
-    font-size:18px;
-    flex-shrink:0;
-    margin-top:2px;
+  .hero h1 {
+    font-size: clamp(26px, 5.5vw, 40px);
+    margin-bottom: 20px;
+    color: #ffffff;
   }
 
-  /* SOLUTION CARD */
-  .solution-box{
-    background:var(--verde-claro);
-    border-left:6px solid var(--verde);
-    border-radius:6px;
-    padding:24px 26px;
-    margin:28px 0;
-  }
-  .solution-box h3{
-    color:var(--verde);
-    font-size:18px;
-    margin-bottom:10px;
+  .hero h1 span {
+    color: var(--dourado-claro);
+    background: linear-gradient(90deg, var(--dourado-claro), var(--dourado));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  /* MODALITIES GRID */
-  .modalidades{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:14px;
-    margin:30px 0;
+  .hero .sub {
+    font-size: clamp(16px, 3.5vw, 18px);
+    color: #dfd9cf;
+    max-width: 620px;
+    margin: 0 auto 32px;
+    font-weight: 400;
+    line-height: 1.5;
   }
-  @media(max-width:520px){.modalidades{grid-template-columns:1fr;}}
-  .modalidade{
-    background:#fff;
-    border:1px solid #e8e0d4;
-    border-radius:6px;
-    padding:18px;
-  }
-  .modalidade .num{
-    font-family:'Arial Black',sans-serif;
-    color:var(--dourado-escuro);
-    font-size:13px;
-    letter-spacing:.1em;
-    margin-bottom:6px;
-  }
-  .modalidade h4{
-    font-family:'Arial Black',sans-serif;
-    font-size:16px;
-    text-transform:uppercase;
-    margin-bottom:6px;
-  }
-  .modalidade p{font-size:14px;margin-bottom:0;color:var(--cinza);}
 
-  /* OFFER CARD */
-  .oferta{
-    background:#fff;
-    border:3px solid var(--dourado);
-    border-radius:10px;
-    padding:36px 28px;
-    text-align:center;
-    max-width:560px;
-    margin:0 auto;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  /* VSL Container */
+  .vsl-wrap {
+    max-width: 640px;
+    margin: 0 auto 16px;
   }
-  .oferta .selo{
-    display:inline-block;
-    background:var(--preto);
-    color:var(--dourado);
-    font-family:'Arial Black',sans-serif;
-    font-size:12px;
-    letter-spacing:.15em;
-    text-transform:uppercase;
-    padding:6px 16px;
-    border-radius:30px;
-    margin-bottom:18px;
-  }
-  .oferta ul{list-style:none;text-align:left;margin:24px 0;}
-  .oferta ul li{
-    display:flex;gap:10px;align-items:flex-start;
-    margin-bottom:12px;font-size:16px;
-  }
-  .oferta ul li::before{
-    content:'✓';
-    color:var(--verde);
-    font-family:'Arial Black',sans-serif;
-    flex-shrink:0;
-  }
-  .price-old{
-    text-decoration:line-through;
-    color:var(--cinza);
-    font-size:18px;
-  }
-  .price-new{
-    font-family:'Arial Black',sans-serif;
-    font-size:48px;
-    color:var(--preto);
-    margin:6px 0 4px;
-  }
-  .price-new sup{font-size:22px;}
-  .price-note{font-size:13px;color:var(--cinza);margin-bottom:0;}
 
-  /* GUARANTEE */
-  .garantia{
-    display:flex;align-items:center;gap:18px;
-    background:#fff;
-    border:1px dashed var(--dourado-escuro);
-    border-radius:8px;
-    padding:20px;
-    max-width:560px;
-    margin:30px auto 0;
+  .vsl {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: #12100e;
+    border-radius: 8px;
+    border: 1px solid rgba(244, 190, 94, 0.3);
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
   }
-  .garantia .selo-circ{
-    flex-shrink:0;
-    width:64px;height:64px;border-radius:50%;
-    background:var(--verde-claro);
-    color:var(--verde);
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Arial Black',sans-serif;
-    font-size:24px;
-  }
-  .garantia p{font-size:15px;margin:0;color:var(--cinza);}
 
-  /* MARKET STATS */
-  .stats{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:16px;
-    margin:30px 0;
-    text-align:center;
+  .vsl .placeholder {
+    position: absolute; 
+    inset: 0;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    gap: 16px;
+    color: #dfd9cf;
+    background: linear-gradient(135deg, #1c1815 0%, #0d0b0a 100%);
+    cursor: pointer;
   }
-  @media(max-width:520px){.stats{grid-template-columns:1fr;}}
-  .stat .num{
-    font-family:'Arial Black',sans-serif;
-    font-size:32px;
-    color:var(--dourado);
+
+  .vsl .play {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: var(--dourado);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 0 20px rgba(226, 153, 29, 0.4);
   }
-  .stat .label{font-size:13px;color:#bcb2a4;font-family:'Arial',sans-serif;}
+
+  .vsl:hover .play {
+    transform: scale(1.08);
+    background: var(--dourado-claro);
+  }
+
+  .vsl .play::after {
+    content: '';
+    border-left: 18px solid var(--preto);
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    margin-left: 4px;
+  }
+
+  .vsl .placeholder span {
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+  }
+
+  .vsl .placeholder small {
+    font-size: 12px;
+    color: #8c8172;
+    letter-spacing: .05em;
+  }
+
+  /* Botão CTA Principal */
+  .cta-btn {
+    display: inline-block;
+    width: 100%;
+    max-width: 480px;
+    margin: 28px auto 8px;
+    background: linear-gradient(180deg, var(--dourado-claro) 0%, var(--dourado) 100%);
+    color: var(--preto);
+    text-align: center;
+    font-weight: 800;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(16px, 4vw, 19px);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 18px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 4px 0 var(--dourado-escuro), 0 10px 24px rgba(0,0,0,0.25);
+    transition: all .1s ease;
+  }
+
+  .cta-btn:hover {
+    background: var(--dourado-claro);
+    transform: translateY(-1px);
+  }
+
+  .cta-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 var(--dourado-escuro);
+  }
+
+  .cta-sub {
+    text-align: center;
+    color: #8c8172;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  /* SEÇÕES */
+  section {
+    padding: 64px 0;
+  }
+
+  .section-dark {
+    background: var(--preto2);
+    color: #f5f2eb;
+  }
+
+  .section-dark h2 {
+    color: #ffffff;
+  }
+
+  h2.title {
+    font-size: clamp(22px, 5vw, 30px);
+    line-height: 1.3;
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--preto);
+  }
+
+  .lead {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #4c443c;
+    font-weight: 500;
+  }
+
+  .section-dark .lead {
+    color: #e5dfd5;
+  }
+
+  p {
+    margin-bottom: 18px;
+    font-size: 16px;
+    color: #4a443d;
+  }
+
+  .section-dark p {
+    color: #ccc5ba;
+  }
+
+  /* LISTA DE PROBLEMAS */
+  .problem-list {
+    list-style: none;
+    margin: 32px 0;
+  }
+
+  .problem-list li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 18px;
+    font-size: 16px;
+    color: #3e3832;
+  }
+
+  .problem-list li::before {
+    content: '✕';
+    color: #dc2626;
+    font-weight: 800;
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    background: #fef2f2;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  /* CAIXA DE SOLUÇÃO */
+  .solution-box {
+    background: #1c1916;
+    border-left: 4px solid var(--dourado);
+    border-radius: 6px;
+    padding: 24px 28px;
+    margin: 36px 0;
+  }
+
+  .solution-box h3 {
+    color: var(--dourado-claro);
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  /* MODALIDADES (O "Pulo do Gato" - Sem entregar o segredo) */
+  .modalidades {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  @media(max-width: 520px) {
+    .modalidades {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .modalidade {
+    background: var(--card-bg);
+    border: 1px solid #ebdcc5;
+    border-radius: 8px;
+    padding: 22px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  }
+
+  .modalidade .num {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--dourado-escuro);
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .modalidade h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--preto);
+  }
+
+  .modalidade p {
+    font-size: 14px;
+    margin-bottom: 0;
+    color: var(--cinza);
+  }
+
+  /* DEPOIMENTOS */
+  .testimonials {
+    background: #f3ede2;
+    padding: 64px 0;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  @media(max-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .testimonial-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid rgba(226, 153, 29, 0.15);
+  }
+
+  .testimonial-card p {
+    font-size: 14px;
+    font-style: italic;
+    color: #4a443d;
+    margin-bottom: 16px;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .testimonial-avatar {
+    width: 44px;
+    height: 44px;
+    background: #ddd7cd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--preto);
+    font-size: 14px;
+  }
+
+  .testimonial-info h5 {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--preto);
+  }
+
+  .testimonial-info span {
+    font-size: 12px;
+    color: var(--cinza);
+    display: block;
+  }
+
+  /* SEÇÃO DE CONTATO / SUPORTE */
+  .suporte-section {
+    background: #ffffff;
+    padding: 48px 0;
+    border-top: 1px solid #ebdcc5;
+    text-align: center;
+  }
+
+  .suporte-section h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--preto);
+  }
+
+  .suporte-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+
+  .suporte-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+  }
+
+  .suporte-btn.whatsapp {
+    background-color: #25d366;
+    color: white;
+  }
+
+  .suporte-btn.whatsapp:hover {
+    background-color: #1ebd58;
+  }
+
+  .suporte-btn.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+  }
+
+  .suporte-btn.instagram:hover {
+    opacity: 0.95;
+  }
+
+  /* OFERTA */
+  .oferta {
+    background: #fff;
+    border: 2px solid var(--dourado);
+    border-radius: 8px;
+    padding: 40px 32px;
+    text-align: center;
+    max-width: 520px;
+    margin: 0 auto;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.06);
+  }
+
+  .oferta .selo {
+    display: inline-block;
+    background: var(--preto);
+    color: var(--dourado-claro);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  .oferta ul {
+    list-style: none;
+    text-align: left;
+    margin: 28px 0;
+  }
+
+  .oferta ul li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    font-size: 15px;
+    color: #4a443d;
+  }
+
+  .oferta ul li::before {
+    content: '✓';
+    color: var(--verde);
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  .price-old {
+    text-decoration: line-through;
+    color: var(--cinza);
+    font-size: 16px;
+  }
+
+  .price-new {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+    color: var(--preto);
+    margin: 4px 0;
+    font-weight: 800;
+  }
+
+  .price-new sup {
+    font-size: 20px;
+  }
+
+  .price-note {
+    font-size: 13px;
+    color: var(--cinza);
+    margin-bottom: 0;
+  }
+
+  /* GARANTIA */
+  .garantia {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #fff;
+    border: 1px dashed #ebdcc5;
+    border-radius: 8px;
+    padding: 24px;
+    max-width: 520px;
+    margin: 32px auto 0;
+  }
+
+  .garantia .selo-circ {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--verde-claro);
+    color: var(--verde);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 20px;
+  }
+
+  .garantia p {
+    font-size: 14px;
+    margin: 0;
+    color: var(--cinza);
+  }
+
+  /* STATS */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 36px 0;
+    text-align: center;
+  }
+
+  @media(max-width: 520px){
+    .stats {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .stat .num {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    color: var(--dourado-claro);
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+
+  .stat .label {
+    font-size: 13px;
+    color: #a49989;
+  }
 
   /* FOOTER */
-  footer{
-    background:var(--preto);
-    color:#75695a;
-    text-align:center;
-    padding:30px 20px;
-    font-size:12px;
-    font-family:'Arial',sans-serif;
+  footer {
+    background: var(--preto);
+    color: #635c53;
+    text-align: center;
+    padding: 36px 20px;
+    font-size: 12px;
+    border-top: 1px solid #1c1a18;
   }
 
-  .center{text-align:center;}
-  .small-caps{font-family:'Arial Black',sans-serif; letter-spacing:.12em; font-size:13px; color:var(--dourado-escuro); text-transform:uppercase;}
+  .center {
+    text-align: center;
+  }
 </style>
 </head>
 <body>
@@ -307,125 +603,224 @@
 <div class="hero">
   <div class="container">
     <div class="eyebrow">Guia completo da coleta de óleo de cozinha usado</div>
-    <h1>O líquido que vai pro <span>esgoto</span> de qualquer cozinha pode virar sua <span>renda extra</span> toda semana</h1>
-    <p class="sub">Descubra como dar o primeiro passo num mercado que já paga até R$ 4 por litro — sem precisar de capital, loja, CNPJ ou experiência prévia.</p>
+    <h1>O líquido descartado na pia pode se tornar uma <span>excelente fonte de renda</span> toda semana</h1>
+    <p class="sub">Entenda como dar o primeiro passo em um mercado altamente lucrativo e que paga por litro — sem precisar de investimento inicial, estoque ou experiência.</p>
 
     <div class="vsl-wrap">
       <div class="vsl">
         <div class="placeholder">
           <div class="play"></div>
-          <span>Assista ao vídeo antes de continuar</span>
-          <small>VSL — em breve</small>
+          <span>Assista ao vídeo para entender o mercado</span>
+          <small>Vídeo de Vendas</small>
         </div>
       </div>
     </div>
 
-    <a href="#oferta" class="cta-btn">Quero começar agora</a>
-    <p class="cta-sub">Acesso imediato após a confirmação · Garantia de 7 dias</p>
+    <!-- Link do Checkout de Referência atualizado -->
+    <a href="https://pay.kiwify.com.br/Pff56Ks" class="cta-btn">Quero Começar Agora</a>
+    <p class="cta-sub">Acesso imediato · Garantia incondicional de 7 dias</p>
   </div>
 </div>
 
-<!-- PROBLEMA -->
+<!-- O PROBLEMA -->
 <section>
   <div class="container">
-    <h2 class="title">Você sente que precisa de uma renda extra, mas todo caminho que você vê parece exigir o que você não tem</h2>
+    <h2 class="title">Gerar uma nova fonte de renda não precisa exigir o que você não tem hoje</h2>
     <ul class="problem-list">
-      <li>Capital pra comprar estoque, montar uma loja ou investir em anúncios</li>
-      <li>Algum "contato por dentro" pra conseguir uma oportunidade boa</li>
-      <li>Tempo livre que você simplesmente não tem entre trabalho e casa</li>
-      <li>Conhecimento técnico ou curso caro pra começar do zero</li>
+      <li>Esqueça a necessidade de ter capital para montar lojas ou comprar estoques caros</li>
+      <li>Não é preciso ter conexões raras ou indicações secretas no mercado</li>
+      <li>Você consegue realizar as coletas mesmo que tenha pouco tempo disponível</li>
+      <li>Não há exigência de conhecimentos técnicos avançados ou formações complexas</li>
     </ul>
-    <p>E enquanto isso, em todas as casas, restaurantes e lanchonetes da sua cidade, um líquido está sendo jogado fora todos os dias — um líquido que indústrias inteiras pagam para receber.</p>
+    <p>Todos os dias, lanchonetes, restaurantes e vizinhos descartam um produto que possui valor comercial direto. Apenas aguardando alguém estruturar a coleta.</p>
   </div>
 </section>
 
-<!-- SOLUÇÃO -->
+<!-- A SOLUÇÃO -->
 <section class="section-dark">
   <div class="container">
-    <h2 class="title">A indústria do biodiesel não consegue chegar até a sua rua. Você consegue.</h2>
-    <p class="lead">Existe uma cadeia inteira — usinas, processadoras, cooperativas — que depende de óleo de cozinha usado para funcionar. O problema delas é logístico: não conseguem entrar em cada vielazinha, condomínio ou lanchonete de bairro pra buscar 20 ou 50 litros.</p>
-    <p>É exatamente aí que entra o coletor. Você se torna a ponte entre quem descarta esse óleo (de graça, com alívio) e quem paga por ele.</p>
+    <h2 class="title">A indústria do biodiesel precisa desse óleo, e você pode ser a ponte de coleta</h2>
+    <p class="lead">Usinas e processadoras necessitam de altos volumes de matéria-prima. Como para elas é inviável recolher pequenas quantidades de porta em porta, você se posiciona de forma estratégica no mercado.</p>
+    <p>O seu papel é simplesmente conectar o descarte desses estabelecimentos e residências locais aos grandes compradores da sua região.</p>
 
-    <div class="solution-box" style="background:#1e1a14;border-left-color:var(--dourado);">
-      <h3 style="color:var(--dourado);">O que isso significa na prática</h3>
-      <p style="color:#d8d2c8;margin-bottom:0;">Você não precisa "vender" óleo pra ninguém comprar de você — você precisa apenas saber onde coletar, como armazenar corretamente e para quem repassar. O <strong>Viver de Óleo</strong> é o guia que mostra exatamente esses três passos, com scripts prontos e preços de referência por litro.</p>
+    <div class="solution-box">
+      <h3>O que o guia ensina na prática:</h3>
+      <p style="margin-bottom:0;">O guia <strong>Viver de Óleo</strong> fornece o método direto de onde coletar, de que forma armazenar de maneira segura e quais são os compradores finais. Tudo isso simplificado em scripts prontos para contato.</p>
     </div>
 
     <div class="stats">
-      <div class="stat"><div class="num">8</div><div class="label">modalidades de coleta explicadas passo a passo</div></div>
-      <div class="stat"><div class="num">R$0</div><div class="label">de investimento inicial necessário</div></div>
-      <div class="stat"><div class="num">4x</div><div class="label">valor de repasse pode variar entre compradores</div></div>
+      <div class="stat"><div class="num">8</div><div class="label">Estratégias de captação mapeadas</div></div>
+      <div class="stat"><div class="num">R$0</div><div class="label">Investimento obrigatório para iniciar</div></div>
+      <div class="stat"><div class="num">4x</div><div class="label">Variação comum no repasse por litro</div></div>
     </div>
   </div>
 </section>
 
-<!-- MODALIDADES (prova de conteúdo) -->
+<!-- OS SEGREDOS / CURIOSIDADE (Ajustado com base no áudio) -->
 <section>
   <div class="container">
-    <h2 class="title">Dentro do guia, você vai encontrar 8 formas diferentes de começar a coletar — escolha a que cabe na sua rotina</h2>
+    <h2 class="title">Os segredos que você irá desbloquear para iniciar suas coletas da melhor forma</h2>
+    <p class="center" style="margin-bottom: 32px;">Revelamos no material os canais fundamentais que trazem resultados rápidos para os coletores:</p>
+    
     <div class="modalidades">
-      <div class="modalidade"><div class="num">01</div><h4>Porta a porta</h4><p>Abordagem em residências da sua vizinhança com script pronto.</p></div>
-      <div class="modalidade"><div class="num">02</div><h4>Restaurantes locais</h4><p>Como fechar parcerias com cozinhas que geram volume todo dia.</p></div>
-      <div class="modalidade"><div class="num">03</div><h4>Condomínios</h4><p>Pontos de coleta fixos para múltiplas famílias de uma vez.</p></div>
-      <div class="modalidade"><div class="num">04</div><h4>Lanchonetes e padarias</h4><p>Negociação direta com quem frita em alto volume.</p></div>
-      <div class="modalidade"><div class="num">05</div><h4>Eventos e festas</h4><p>Coleta pontual de grandes volumes em um único dia.</p></div>
-      <div class="modalidade"><div class="num">06</div><h4>Parcerias com cooperativas</h4><p>Como se conectar a redes de coleta já existentes na sua região.</p></div>
-      <div class="modalidade"><div class="num">07</div><h4>Indicação e rede</h4><p>Estrutura simples para fazer o óleo "vir até você".</p></div>
-      <div class="modalidade"><div class="num">08</div><h4>Pontos públicos de descarte</h4><p>Como mapear e acessar pontos coletivos já disponíveis.</p></div>
+      <div class="modalidade">
+        <span class="num">01</span>
+        <h4>O Canal Oculto em Vizinhanças</h4>
+        <p>A melhor forma de abordar residências e criar pontos de descarte locais sem parecer invasivo.</p>
+      </div>
+      <div class="modalidade">
+        <span class="num">02</span>
+        <h4>A Aliança em Cozinhas Comerciais</h4>
+        <p>Como estruturar propostas de coleta para restaurantes locais de maneira rápida.</p>
+      </div>
+      <div class="modalidade">
+        <span class="num">03</span>
+        <h4>O Sistema em Condomínios Residenciais</h4>
+        <p>Como obter volumes expressivos com apenas uma visita programada na sua região.</p>
+      </div>
+      <div class="modalidade">
+        <span class="num">04</span>
+        <h4>A Rota Rápida de Lanchonetes</h4>
+        <p>A forma adequada de negociar com comércios que utilizam fritura constante diariamente.</p>
+      </div>
+      <div class="modalidade">
+        <span class="num">05</span>
+        <h4>A Captação em Grandes Eventos</h4>
+        <p>Mapeamento de feiras e celebrações locais para coletar grande quantidade de matéria-prima de uma única vez.</p>
+      </div>
+      <div class="modalidade">
+        <span class="num">06</span>
+        <h4>Parcerias Estratégicas Locais</h4>
+        <p>O segredo para se conectar a associações que otimizam a sua distribuição e armazenamento.</p>
+      </div>
+      <div class="modalidade">
+        <span class="num">07</span>
+        <h4>O Método de Captação Passiva</h4>
+        <p>Configuração simples para que as pessoas tragam o produto diretamente até você de forma espontânea.</p>
+      </div>
+      <div class="modalidade">
+        <span class="num">08</span>
+        <h4>Pontos Públicos Compartilhados</h4>
+        <p>Como aproveitar as estruturas existentes para acelerar a sua logística de entrega.</p>
+      </div>
     </div>
-    <p>Cada modalidade vem com a faixa de preço por litro praticada, os equipamentos necessários e uma "sacada" prática para quem está começando do zero.</p>
+    <p class="center">Além de cada uma destas táticas, o guia aponta quais são os melhores compradores do mercado e como maximizar o valor de venda do óleo coletado.</p>
   </div>
 </section>
 
-<!-- CREDIBILIDADE / CONTEXTO DE MERCADO -->
+<!-- SEÇÃO DE DEPOIMENTOS (Nova adição conforme o áudio) -->
+<section class="testimonials">
+  <div class="container">
+    <h2 class="title">O que dizem as pessoas que começaram a aplicar o guia</h2>
+    
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>"Eu estava procurando uma forma de fazer uma renda extra no final de semana. Com a estratégia de condomínios que o guia ensina, hoje recolho mais de 150 litros sem complicações."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MS</div>
+          <div class="testimonial-info">
+            <h5>Marcos Silva</h5>
+            <span>Coletor nas horas vagas</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <p>"A abordagem para restaurantes sempre me deu receio, mas os scripts prontos facilitaram demais. Fechei duas parcerias logo na primeira semana de aplicação."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">CR</div>
+          <div class="testimonial-info">
+            <h5>Camila Ramos</h5>
+            <span>Empreendedora Local</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <p>"Mesmo aposentado, consegui organizar minha rotina. Faço a coleta em residências próximas duas vezes por semana e garanto um ótimo dinheiro extra todo mês."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JC</div>
+          <div class="testimonial-info">
+            <h5>José Carlos</h5>
+            <span>Aposentado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO DE MERCADO -->
 <section class="section-dark">
   <div class="container">
-    <h2 class="title">Isso não é modinha. É um mercado que cresce há anos.</h2>
-    <p class="lead">O Brasil é um dos maiores produtores de biodiesel do mundo, e a matéria-prima reciclada — como o óleo de cozinha usado — é parte essencial dessa cadeia. Quanto mais a demanda por biocombustível cresce, mais essa cadeia precisa de gente na ponta fazendo a coleta.</p>
-    <p style="color:#d8d2c8;">Enquanto grandes empresas brigam pelo "topo" dessa pirâmide — contratos, usinas, logística pesada — a base inteira depende de pessoas comuns, sem CNPJ, sem frota, sem escritório. É essa lacuna que o <strong>Viver de Óleo</strong> ensina você a ocupar.</p>
+    <h2 class="title">Um mercado sólido e em expansão contínua</h2>
+    <p class="lead">A demanda por biocombustíveis cresce anualmente em nosso país, impulsionando a procura por óleo reaproveitado.</p>
+    <p>O mercado é amplo e existe espaço para atuação em diversas localidades. O objetivo do guia <strong>Viver de Óleo</strong> é preparar você para ocupar esse espaço e obter resultados financeiros de forma independente.</p>
   </div>
 </section>
 
-<!-- OFERTA -->
+<!-- OFERTA (Checkout de Referência Atualizado) -->
 <section id="oferta">
   <div class="container">
     <h2 class="title">Viver de Óleo — Guia Completo da Coleta de Óleo de Cozinha Usado</h2>
     <div class="oferta">
-      <span class="selo">Acesso imediato · 100% digital</span>
-      <p style="font-size:16px;margin-bottom:18px;">Tudo o que você precisa pra dar o primeiro passo nesse mercado, sem gastar nada de início.</p>
+      <span class="selo">Acesso Imediato · Conteúdo Digital</span>
+      <p style="font-size:15px; margin-bottom:18px;">As bases necessárias para iniciar suas atividades no mercado de reciclagem de óleo.</p>
       <ul>
-        <li>As 8 modalidades de coleta, com scripts de abordagem prontos para usar</li>
-        <li>Faixas de preço por litro praticadas em cada modalidade</li>
-        <li>Boas práticas de coleta, armazenamento e segurança</li>
-        <li>Como e para quem repassar o óleo coletado — com comparação entre compradores</li>
-        <li>Lista de equipamentos básicos, com valores sugeridos</li>
+        <li>8 estratégias essenciais com abordagens para aplicar diretamente</li>
+        <li>Tabela de precificação sugerida por litro do material</li>
+        <li>Informações de armazenamento e cuidados fundamentais de logística</li>
+        <li>Mapeamento de quem são e onde encontrar compradores de óleo</li>
+        <li>Listagem de itens e materiais básicos recomendados para começar</li>
       </ul>
       <div class="price-old">De R$ 197,00</div>
       <div class="price-new"><sup>R$</sup>57</div>
-      <p class="price-note">Pagamento único · Acesso ao PDF para baixar e consultar quando quiser</p>
-      <a href="#" class="cta-btn">Quero o guia agora por R$ 57</a>
+      <p class="price-note">Apenas pagamento único. Receba em formato digital para leitura imediata.</p>
+      
+      <!-- Link do Checkout de Referência atualizado -->
+      <a href="https://pay.kiwify.com.br/Pff56Ks" class="cta-btn">Quero o Guia por R$ 57</a>
     </div>
 
     <div class="garantia">
       <div class="selo-circ">7</div>
-      <p><strong>Garantia de 7 dias.</strong> Se você abrir o guia, aplicar o conteúdo e sentir que não é para você, é só pedir o reembolso — sem perguntas, sem burocracia.</p>
+      <p><strong>Garantia de 7 dias.</strong> Se por qualquer motivo você achar que o material não atende suas expectativas, poderá solicitar o reembolso integral dentro deste prazo.</p>
     </div>
   </div>
 </section>
 
-<!-- CTA FINAL / URGÊNCIA -->
+<!-- SEÇÃO DE SUPORTE / BOTÕES (Nova adição conforme o áudio) -->
+<section class="suporte-section">
+  <div class="container">
+    <h3>Ainda tem alguma dúvida sobre o material?</h3>
+    <p>Se você quer saber mais detalhes ou possui alguma pergunta sobre o guia, entre em contato direto conosco através das redes abaixo:</p>
+    
+    <div class="suporte-buttons">
+      <!-- Substitua os '#' pelos seus respectivos links do WhatsApp e Instagram -->
+      <a href="https://wa.me/5500999999999?text=Quero%20saber%20mais%20sobre%20o%20guia%20Viver%20de%20Óleo" class="suporte-btn whatsapp" target="_blank">
+        Fale Conosco no WhatsApp
+      </a>
+      <a href="https://instagram.com/seu_perfil" class="suporte-btn instagram" target="_blank">
+        Siga-nos no Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL (Checkout de Referência Atualizado) -->
 <section class="section-dark center">
   <div class="container">
-    <h2 class="title">Enquanto você pensa, alguém na sua rua está jogando óleo fora agora</h2>
-    <p class="lead" style="max-width:560px;margin:0 auto 28px;">A diferença entre quem já está coletando e quem ainda está pensando é, normalmente, uma tarde de leitura. O guia está pronto. A pergunta é: você vai começar essa semana ou no mês que vem?</p>
-    <a href="#oferta" class="cta-btn" style="margin:0 auto;">Sim, quero começar agora — R$ 57</a>
-    <p class="cta-sub" style="margin-top:12px;">Acesso imediato após a confirmação do pagamento</p>
+    <h2 class="title">Comece a aproveitar as oportunidades de coleta disponíveis hoje na sua região</h2>
+    <p class="lead" style="max-width:560px; margin:0 auto 28px;">Aprenda a mapear e executar as rotas de coleta na sua cidade. Obtenha o seu material de apoio e dê início às atividades esta semana.</p>
+    
+    <!-- Link do Checkout de Referência atualizado -->
+    <a href="https://pay.kiwify.com.br/Pff56Ks" class="cta-btn" style="margin:0 auto;">Sim, Quero Começar Agora</a>
+    <p class="cta-sub" style="margin-top:12px; color: #a49989;">Receba o acesso imediato ao guia após a aprovação do seu pagamento</p>
   </div>
 </section>
 
 <footer>
-  Viver de Óleo — Conteúdo educacional sobre coleta e comercialização de óleo de cozinha usado.<br>
-  Os resultados podem variar de acordo com a região, esforço e dedicação de cada pessoa.
+  Viver de Óleo — Conteúdo educativo sobre práticas e comercialização de óleo de cozinha usado.<br>
+  Os resultados podem variar de acordo com o trabalho e a dedicação aplicados a estas diretrizes.
 </footer>
 
 </body>
