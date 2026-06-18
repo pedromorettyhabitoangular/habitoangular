@@ -12,26 +12,26 @@
 
 <style>
   :root {
-    /* Preto Premium */
-    --fundo-principal: #0D0D0D;
-    --fundo-secundario: #161616;
-    --card-escuro: #1F1F1F;
+    /* Fundos — marrom escuro envelhecido, não preto puro */
+    --fundo-principal: #1A1208;
+    --fundo-secundario: #221A0A;
+    --card-escuro: #2E2210;
 
-    /* Dourado Óleo */
-    --dourado-principal: #F4B400;
-    --dourado-premium: #FFD54A;
-    --dourado-brilho: #FFF1A8;
+    /* Dourado rico → âmbar mel (gradiente principal) */
+    --dourado-principal: #D4A017;
+    --dourado-premium: #F2C14E;
+    --dourado-brilho: #FDE99A;
 
-    /* Verde Crescimento */
-    --verde-principal: #2DBE60;
-    --verde-escuro: #1F8A46;
-    --verde-claro: #6EE88F;
+    /* Verde oliva botânico (elementos de suporte) */
+    --verde-principal: #6B8E23;
+    --verde-escuro: #4E6B18;
+    --verde-claro: #A3BA5E;
 
-    /* Neutros */
-    --branco: #FFFFFF;
-    --cinza-claro: #EAEAEA;
-    --cinza-medio: #A8A8A8;
-    --borda-suave: rgba(255, 255, 255, 0.08);
+    /* Neutros quentes */
+    --branco: #FFF8EE;
+    --cinza-claro: #E8D9BB;
+    --cinza-medio: #A08A60;
+    --borda-suave: rgba(242, 193, 78, 0.12);
   }
 
   * {
@@ -64,11 +64,21 @@
 
   /* HERO */
   .hero {
-    background: linear-gradient(180deg, var(--fundo-principal) 0%, var(--fundo-secundario) 100%);
+    background: linear-gradient(160deg, #1A1208 0%, #2E1C06 50%, #1A1208 100%);
     color: var(--branco);
     padding: 60px 0 64px;
     text-align: center;
     border-bottom: 4px solid var(--dourado-principal);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(212,160,23,0.12) 0%, transparent 70%);
+    pointer-events: none;
   }
 
   .hero .eyebrow {
@@ -115,9 +125,9 @@
     padding-top: 56.25%;
     background: var(--fundo-principal);
     border-radius: 8px;
-    border: 1px solid rgba(244, 180, 0, 0.3);
+    border: 1px solid rgba(212, 160, 23, 0.4);
     overflow: hidden;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(242,193,78,0.08);
   }
 
   .vsl .placeholder {
@@ -142,7 +152,7 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease, background-color 0.2s ease;
-    box-shadow: 0 0 20px rgba(244, 180, 0, 0.3);
+    box-shadow: 0 0 24px rgba(212, 160, 23, 0.45);
   }
 
   .vsl:hover .play {
@@ -176,8 +186,8 @@
     width: 100%;
     max-width: 480px;
     margin: 28px auto 8px;
-    background: linear-gradient(180deg, var(--dourado-premium) 0%, var(--dourado-principal) 100%);
-    color: var(--fundo-principal);
+    background: linear-gradient(180deg, var(--dourado-brilho) 0%, var(--dourado-premium) 40%, var(--dourado-principal) 100%);
+    color: #1A1208;
     text-align: center;
     font-weight: 800;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -187,7 +197,7 @@
     padding: 18px 24px;
     border-radius: 6px;
     text-decoration: none;
-    box-shadow: 0 4px 0 var(--fundo-principal), 0 10px 24px rgba(244, 180, 0, 0.2);
+    box-shadow: 0 4px 0 #8A6210, 0 10px 28px rgba(212, 160, 23, 0.3);
     transition: all .1s ease;
   }
 
@@ -214,7 +224,7 @@
   }
 
   .section-alt {
-    background: var(--fundo-secundario);
+    background: linear-gradient(180deg, var(--fundo-secundario) 0%, #1E1508 100%);
   }
 
   h2.title {
@@ -275,14 +285,14 @@
 
   /* CAIXA DE SOLUÇÃO (Verde Crescimento) */
   .solution-box {
-    background: var(--card-escuro);
+    background: rgba(107, 142, 35, 0.08);
     border-left: 4px solid var(--verde-principal);
     border-radius: 6px;
     padding: 24px 28px;
     margin: 36px 0;
-    border-top: 1px solid var(--borda-suave);
-    border-right: 1px solid var(--borda-suave);
-    border-bottom: 1px solid var(--borda-suave);
+    border-top: 1px solid rgba(107, 142, 35, 0.15);
+    border-right: 1px solid rgba(107, 142, 35, 0.15);
+    border-bottom: 1px solid rgba(107, 142, 35, 0.15);
   }
 
   .solution-box h3 {
@@ -311,14 +321,15 @@
 
   .modalidade {
     background: var(--card-escuro);
-    border: 1px solid var(--borda-suave);
+    border: 1px solid rgba(212, 160, 23, 0.15);
     border-radius: 8px;
     padding: 22px;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease, background 0.2s ease;
   }
 
   .modalidade:hover {
-    border-color: rgba(244, 180, 0, 0.3);
+    border-color: rgba(242, 193, 78, 0.45);
+    background: rgba(212, 160, 23, 0.05);
   }
 
   .modalidade .num {
@@ -365,8 +376,8 @@
     background: var(--card-escuro);
     border-radius: 8px;
     padding: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    border: 1px solid var(--borda-suave);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 1px solid rgba(212, 160, 23, 0.2);
   }
 
   .video-wrap {
@@ -388,9 +399,9 @@
 
   /* SEÇÃO DE CONTATO / SUPORTE */
   .suporte-section {
-    background: var(--fundo-principal);
+    background: #100D05;
     padding: 48px 0;
-    border-top: 1px solid var(--borda-suave);
+    border-top: 1px solid rgba(212, 160, 23, 0.1);
     text-align: center;
   }
 
@@ -441,20 +452,20 @@
 
   /* OFERTA */
   .oferta {
-    background: var(--card-escuro);
+    background: linear-gradient(160deg, #2E2210 0%, #221A0A 100%);
     border: 2px solid var(--dourado-principal);
     border-radius: 8px;
     padding: 40px 32px;
     text-align: center;
     max-width: 520px;
     margin: 0 auto;
-    box-shadow: 0 12px 36px rgba(0,0,0,0.3);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(242,193,78,0.1);
   }
 
   .oferta .selo {
     display: inline-block;
-    background: var(--dourado-principal);
-    color: var(--fundo-principal);
+    background: linear-gradient(90deg, var(--dourado-principal), var(--dourado-premium));
+    color: #1A1208;
     font-size: 11px;
     font-weight: 800;
     letter-spacing: .12em;
@@ -516,8 +527,8 @@
     display: flex;
     align-items: center;
     gap: 18px;
-    background: var(--card-escuro);
-    border: 1px dashed var(--borda-suave);
+    background: rgba(107, 142, 35, 0.06);
+    border: 1px dashed rgba(107, 142, 35, 0.4);
     border-radius: 8px;
     padding: 24px;
     max-width: 520px;
@@ -529,14 +540,14 @@
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: rgba(45, 190, 96, 0.1);
+    background: rgba(107, 142, 35, 0.12);
     color: var(--verde-claro);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
     font-size: 20px;
-    border: 1px solid rgba(45, 190, 96, 0.2);
+    border: 1px solid rgba(107, 142, 35, 0.3);
   }
 
   .garantia p {
@@ -575,12 +586,12 @@
 
   /* FOOTER */
   footer {
-    background: var(--fundo-principal);
+    background: #100D05;
     color: var(--cinza-medio);
     text-align: center;
     padding: 36px 20px;
     font-size: 12px;
-    border-top: 1px solid var(--borda-suave);
+    border-top: 1px solid rgba(212, 160, 23, 0.15);
   }
 
   .center {
