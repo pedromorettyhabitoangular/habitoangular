@@ -437,10 +437,59 @@
       z-index: 1;
     }
 
+    .fases {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .fase {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      background: rgba(168,85,247,0.06);
+      border: 1px solid var(--borda);
+      border-radius: 12px;
+      padding: 14px 20px;
+      min-width: 100px;
+    }
+
+    .fase-emoji { font-size: 22px; }
+
+    .fase-titulo {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--texto);
+      letter-spacing: 0.01em;
+    }
+
+    .fase-sub {
+      font-size: 11px;
+      color: var(--texto-muted);
+      letter-spacing: 0.03em;
+    }
+
+    .fase-seta {
+      font-size: 18px;
+      color: var(--violeta-claro);
+      opacity: 0.5;
+      margin-bottom: 16px;
+    }
+
     @media (max-width: 480px) {
       .header { padding: 2.5rem 1.25rem 1.5rem; }
       .form-wrap { padding: 0 1.25rem 3rem; }
       .question-title { font-size: 18px; }
+    }
+
+    @media (max-width: 380px) {
+      .fase-seta { display: none; }
+      .fases { gap: 8px; }
+      .fase { min-width: 85px; padding: 12px 14px; }
     }
   </style>
 </head>
@@ -450,10 +499,26 @@
   <div class="header">
     <div class="logo">Comunidade Hábito Angular</div>
     <div class="badge-processo">Processo de Admissão</div>
-    <h1>Nem todo mundo está<br><em>pronto para entrar aqui.</em></h1>
-    <p>A comunidade é seleta porque o resultado precisa ser real. Quem passa pelo processo sai com um hábito instalado de verdade — 100, 200 dias consecutivos. E para isso acontecer, eu preciso conhecer você antes.</p>
-    <div class="aviso">
-      <strong>Como funciona:</strong> preencha o diagnóstico abaixo com honestidade. Vou analisar pessoalmente e, se fizer sentido avançar, entro em contato pelo WhatsApp em até 24 horas.
+    <h1><em>Esta comunidade não é para todo mundo.</em></h1>
+    <p>Antes de liberar o acesso, preciso entender se faz sentido para você. O processo é simples e rápido.</p>
+    <div class="fases">
+      <div class="fase">
+        <div class="fase-emoji">📋</div>
+        <div class="fase-titulo">Perguntas</div>
+        <div class="fase-sub">Diagnóstico</div>
+      </div>
+      <div class="fase-seta">→</div>
+      <div class="fase">
+        <div class="fase-emoji">📞</div>
+        <div class="fase-titulo">Ligação</div>
+        <div class="fase-sub">Qualificação</div>
+      </div>
+      <div class="fase-seta">→</div>
+      <div class="fase">
+        <div class="fase-emoji">🎯</div>
+        <div class="fase-titulo">Entrevista</div>
+        <div class="fase-sub">Decisão final</div>
+      </div>
     </div>
   </div>
 
