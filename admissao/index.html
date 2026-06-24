@@ -66,20 +66,20 @@
     /* HEADER */
     .header {
       text-align: center;
-      padding: 3.5rem 1.5rem 2rem;
+      padding: 1.5rem 1.5rem 1rem;
       max-width: 620px;
       margin: 0 auto;
     }
 
     .logo {
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       background: var(--grad);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 2rem;
+      margin-bottom: 0.75rem;
       opacity: 0.9;
     }
 
@@ -90,12 +90,12 @@
       background: rgba(168,85,247,0.08);
       border: 1px solid var(--borda);
       border-radius: 20px;
-      padding: 6px 16px;
+      padding: 4px 14px;
       font-size: 11px;
       color: var(--violeta-claro);
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-bottom: 1.75rem;
+      margin-bottom: 1rem;
     }
 
     .badge-processo::before {
@@ -114,11 +114,11 @@
     }
 
     .header h1 {
-      font-size: clamp(28px, 5.5vw, 42px);
+      font-size: clamp(20px, 4.5vw, 32px);
       font-weight: 700;
       line-height: 1.2;
       color: var(--texto);
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       letter-spacing: -0.02em;
     }
 
@@ -131,10 +131,10 @@
     }
 
     .header p {
-      font-size: 16px;
+      font-size: 13px;
       color: var(--texto-muted);
-      line-height: 1.75;
-      margin-bottom: 1.25rem;
+      line-height: 1.6;
+      margin-bottom: 0;
     }
 
     .aviso {
@@ -153,10 +153,10 @@
 
     /* DIVISOR */
     .divisor {
-      width: 60px;
+      width: 40px;
       height: 2px;
       background: var(--grad);
-      margin: 2rem auto;
+      margin: 0.75rem auto;
       border-radius: 2px;
     }
 
@@ -168,7 +168,7 @@
     }
 
     /* PROGRESSO */
-    .progress-section { margin-bottom: 2.5rem; }
+    .progress-section { margin-bottom: 1.25rem; }
 
     .progress-info {
       display: flex;
@@ -441,55 +441,56 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      margin-top: 1.75rem;
-      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 0.875rem;
+      flex-wrap: nowrap;
     }
 
     .fase {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 6px;
+      gap: 3px;
       background: rgba(168,85,247,0.06);
       border: 1px solid var(--borda);
-      border-radius: 12px;
-      padding: 14px 20px;
-      min-width: 100px;
+      border-radius: 10px;
+      padding: 8px 10px;
+      flex: 1;
     }
 
-    .fase-emoji { font-size: 22px; }
+    .fase-emoji { font-size: 16px; }
 
     .fase-titulo {
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 700;
       color: var(--texto);
-      letter-spacing: 0.01em;
     }
 
     .fase-sub {
-      font-size: 11px;
+      font-size: 10px;
       color: var(--texto-muted);
-      letter-spacing: 0.03em;
     }
 
     .fase-seta {
-      font-size: 18px;
+      font-size: 12px;
       color: var(--violeta-claro);
-      opacity: 0.5;
-      margin-bottom: 16px;
+      opacity: 0.4;
+      flex-shrink: 0;
+    }
+
+    /* DIVISOR compacto */
+    .divisor {
+      width: 40px;
+      height: 2px;
+      background: var(--grad);
+      margin: 1rem auto;
+      border-radius: 2px;
     }
 
     @media (max-width: 480px) {
-      .header { padding: 2.5rem 1.25rem 1.5rem; }
+      .header { padding: 1.25rem 1.25rem 0.75rem; }
       .form-wrap { padding: 0 1.25rem 3rem; }
-      .question-title { font-size: 18px; }
-    }
-
-    @media (max-width: 380px) {
-      .fase-seta { display: none; }
-      .fases { gap: 8px; }
-      .fase { min-width: 85px; padding: 12px 14px; }
+      .question-title { font-size: 17px; }
     }
   </style>
 </head>
